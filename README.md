@@ -3,26 +3,18 @@ Pivotal Markdown Link (PMDL)
 
 PMDL is a Chrome [Content Script Extension](https://developer.chrome.com/extensions/content_scripts) that places an extra button into [Pivotal Tracker](pivotaltracker.com) story card.
 
-![Example image](https://raw.github.com/efexen/pivotal_markdown_link/master/example_image.png)
+![The best story in the world](https://cloud.githubusercontent.com/assets/442279/24854149/8e1922e6-1e07-11e7-89e4-2e3814b34bc7.png)
 
 Clicking the button will copy a markdown link to the story to your clipboard and ready to paste into Github PR or wherever
 
-Currently the format of text copied is hardcoded as
+Produces markdown links in the following format
 
 ```md
-[id](url) - title
+[PT{{ID}}]({{URL}}) {{NAME}}
 ```
 
 For instance
 
 ```md
-[#100734444](https://www.pivotaltracker.com/story/show/100734444) - Add option to configure the format of the copied text
+[PT#1337](https://www.pivotaltracker.com/story/show/1337) The best story in the world
 ```
-
-### Todo
-
-Here's what's left to do, PRs very welcome :wink:
-
-- [ ] Add ability to customise text template
-- [ ] Rewrite jQuery bits to remove dependency
-- [ ] Less reliance on Pivotal markup if possible
