@@ -52,6 +52,7 @@ PMDL = function() {
 
     cloned.addClass('markdown-link');
     cloned.attr('data-clipboard-text', storyMDText(story));
+    cloned.attr('title', "Copy this story's link to your clipboard as markdown");
 
     return cloned;
   }
