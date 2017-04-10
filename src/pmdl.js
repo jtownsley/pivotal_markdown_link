@@ -1,5 +1,5 @@
 PMDL = function() {
-  var template = "[{{ID}}]({{URL}}) - {{NAME}}";
+  var template = "[PT{{ID}}]({{URL}}) {{NAME}}";
 
   function mutationIsMatch(mutation) {
     return mutation.target.className == 'tn-panel__loom' &&
