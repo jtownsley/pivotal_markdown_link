@@ -10,11 +10,11 @@ Clicking the button will copy a markdown link to the story to your clipboard and
 Produces markdown links in the following format
 
 ```md
-[PT{{ID}}]({{URL}}) {{NAME}}
+[{{ID}}]({{URL}}) {{NAME}}
 ```
 
 For instance
 
 ```md
-[PT#1337](https://www.pivotaltracker.com/story/show/1337) The best story in the world
+[#1337](https://www.pivotaltracker.com/story/show/1337) The best story in the world
 ```
