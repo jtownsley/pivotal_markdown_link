@@ -1,5 +1,5 @@
 PMDL = function() {
-  var template = "[PT{{ID}}]({{URL}}) {{NAME}}";
+  var template = "[{{ID}}]({{URL}}) {{NAME}}";
 
   function mutationIsMatch(mutation) {
     return mutation.target.className == 'tn-panel__loom' &&
@@ -32,7 +32,7 @@ PMDL = function() {
   }
 
   function storyName(story) {
-    return story.find('fieldset.story.name textarea.name').val();
+    return story.find("fieldset.name [name='story[name]']").val();
   }
 
   function getStory(baseButton) {
