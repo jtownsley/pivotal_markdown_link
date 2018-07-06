@@ -43,7 +43,7 @@ PMDL = function() {
     return template
       .replace(/{{ID}}/, storyId(story))
       .replace(/{{URL}}/, storyUrl(story))
-      .replace(/{{NAME}}/, storyName(story));
+      .replace(/{{NAME}}/, storyName(story).replace(/'/, "’"));
   }
 
   function createMDButton(baseButton) {
@@ -53,7 +53,6 @@ PMDL = function() {
     cloned.addClass('markdown-link');
     cloned.attr('data-clipboard-text', storyMDText(story));
     cloned.attr('title', "Copy this story's link to your clipboard as markdown");
-
     return cloned;
   }
 
