@@ -57,10 +57,21 @@ PMDL = function() {
   }
 
   function init() {
-    var observer = new MutationObserver(checkMutations);
-    observer.observe(document, {
-      subtree: true, childList: true
-    });
+    const reg = /\/stories\//g
+    if (reg.test(window.location.href)) {
+      // wait for the clipboard button to render, then find it and
+      $(".clipboard_button:first").waitUntilExists(() => {
+        const clipButton = $.find('.clipboard_button:first')[0];
+        $(clipButton).before(createMDButton(clipButton));
+      }, true);
+
+    } else {
+      var observer = new MutationObserver(checkMutations);
+
+      observer.observe(document, {
+        subtree: true, childList: true
+      });
+    }
   }
 
   return {
